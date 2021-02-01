@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback</title>
+	<style>
+	@import"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/**/
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(m3.jpg);
+    background-size: cover;
+    font-family: serif;
+}
+.wrap{
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	color: white;
+}
+.wrap h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border-bottom: 2px solid pink;
+	border-bottom-style: groove;
+	border-width: 10px;
+    padding-bottom: 6px;
+}
+.wrap input[type="text"],.wrap input[type="password"]{
+    border:0;
+    background:none;
+    display: block;
+    margin: 20px auto;  
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 16px 15px; 
+    outline: none;
+    color: white;
+}
+.wrap input[type="text"]:hover,.wrap input[type="password"]:hover{
+	width: 280px;
+}
+.wrap input[type="submit"],.wrap input[type="reset"]{
+    border:0;
+    background:none;
+    display: inline block;
+    margin: 20px auto; 
+    margin-right: 10px;
+    text-align: center;
+    border:2px solid #3498db;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.wrap input[type="submit"]:hover,.wrap input[type="reset"]:hover{
+	background-color: black;
+	opacity: 0.5;
+	color: white;
+	font-weight: bold;
+}
+.wrap textarea{
+    border:0;
+    border-radius: 6px;
+    color: black;
+    opacity: 0.4;
+	}
+	</style>
+}
+</head>
+<body>
+<div class="wrap">
+	<h1>Feedback</h1>
+	<form action="mainjava.html">
+		<input type="text" placeholder="Name">
+		<input type="text" placeholder="Email"><br>
+        <font size="4px">Description</font><br><br>
+		<input type="radio" name="type" value="complain">Complain
+		<input type="radio" name="type" value="suggestion">Suggestion
+		<input type="radio" name="type" value="request">Request<br><br>
+		<textarea rows="4" cols="20"></textarea><br>
+		<input type="submit" value="submit">
+		<input type="reset" value="Reset">
+	</form>
+</div>
+</body>
+</html>
