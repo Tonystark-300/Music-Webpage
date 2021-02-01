@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+<style>
+@import"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(m3.jpg);
+    background-size: cover;
+    font-family: serif;
+}
+.box{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+}
+.box h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border-bottom: 2px solid pink;
+	border-bottom-style: groove;
+	border-width: 10px;
+    padding-bottom: 6px;
+}
+.box input[type="text"],.box input[type="password"]{
+    border:0;
+    background:none;
+    display: block;
+    margin: 20px auto;  
+    text-align: center;
+    border:2px solid #3498db;
+    padding: 16px 15px; 
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type="text"]:hover,.box input[type="password"]:hover{
+	width: 280px;
+	border-color: #2ecc71;
+}
+.box input[type="submit"]{
+    border:0;
+    background:none;
+    display: block;
+    margin: 20px auto; 
+    text-align: center;
+    border:2px solid #3498db;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+	background-color: #2ecc71;
+	color: black;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<form class="box " action="index.html">
+	<h1><i class="fa fa-user" aria-hidden="true"></i> Login</h1>
+<input name="" type="text" placeholder="Username" maxlength="15" size="15">
+<input  name="" type="password" placeholder="Password" maxlength="10" size="10">
+<input type="checkbox" name="remember" value="remember" style="margin-bottom: 10px;"><b><i><font color="white"> Remember Me</font></i></b><br>
+<input type="submit" name="" value="Login" style="margin-bottom: 20px;">
+</form>
+</body>
+</html>

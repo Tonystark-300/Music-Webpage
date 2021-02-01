@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<script>
+		function validate(thisform)
+		{
+			var username=thisform.uname.value;
+			var pass1=thisform.pw1.value;
+			var pass2=thisform.pw2.value;
+			var Email=thisform.email.value;
+			
+            if(username=="")
+			{
+				alert("Please enter the username");
+				thisform.uname.focus();
+				return false;
+			}
+			if(pass1=="")
+			{
+				alert("Please enter the password");
+				thisform.pw1.focus();
+				return false;
+			}
+			if(pass1.length<8)
+			{
+				alert("password must contain atleast 8 digits");
+				thisform.pw1.focus();
+				return false;
+			}
+			if (pass2=="")
+			{
+				alert("Please enter the confirm password");
+				thisform.pw2.focus();
+				return false;
+			}
+			if (pass2.length<8)
+			{
+				alert("Confirm password must contain atleast 8 digits");
+				thisform.pw2.focus();
+				return false;
+			}
+			if(pass1.length>=8&&pass2.length>=8)
+			{
+				if(pass1!=pass2)
+				{
+					alert("password do not match...enter correct password");
+					return false;
+				}
+			}
+			
+			return true;
+		}
+	</script>
+	<style>
+
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(m3.jpg);
+    background-size: cover;
+    font-family: serif;
+}
+.wrap{
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	border:0;
+	border-radius: 20px;
+}
+.wrap h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border-bottom: 2px solid pink;
+	border-bottom-style: groove;
+	border-width: 10px;
+    padding-bottom: 6px;
+}
+.wrap input[type="text"],.wrap input[type="password"],.wrap input[type="email"]{
+    border:0;
+    background:none;
+    display: block;
+    margin: 20px auto;  
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 16px 15px; 
+    outline: none;
+    color: white;
+}
+.wrap input[type="text"]:hover,.wrap input[type="password"]:hover,.wrap input[type="email"]:hover{
+	width: 280px;
+}
+.wrap input[type="submit"],.wrap input[type="reset"]{
+    border:0;
+    background:none;
+    display: inline block;
+    margin: 20px auto; 
+    margin-right: 10px;
+    text-align: center;
+    border:2px solid #3498db;
+    padding: 14px 40px;
+   
+    color: yellow;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.wrap input[type="submit"]:hover,.wrap input[type="reset"]:hover{
+	background-color: black;
+	opacity: 0.5;
+	color: white;
+	font-weight: bold;
+}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<h1> Sign up</h1>
+	<form action="index.html" onsubmit="return validate(this)" method="Post">
+		<input type="text" name="fname" placeholder="First Name" required>
+		<input type="text" name="lname" placeholder="Last Name" required >
+		<input type="email" name="email" placeholder="Email">
+		<input type="text" name="uname" placeholder="User name" maxlength="15" size="15">
+		<input type="password" name="pw1" placeholder="Pass word" maxlength="10" size="10">
+		<input type="password" name="pw2" placeholder=" Confirm Password" maxlength="10" size="10">
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</form>
+
+
+
+</div>
+</body>
+</html>
